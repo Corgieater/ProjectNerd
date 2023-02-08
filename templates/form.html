@@ -1,0 +1,88 @@
+{% load static %} {% load socialaccount%} {% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Nerd</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/extension.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <h1>
+          Hi, {{ user.socialaccount_set.all.0.extra_data.given_name }} <br />
+          找到酷東西了？
+        </h1>
+        <hr />
+        <div class="mb-3">
+        <div class="ratio ratio-21x9">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/Q1qtONRHabI"
+            title="YouTube video player"
+          ></iframe>
+        </div>
+      </header>
+      <div class="mb-3">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>儲存至...</option>
+          <!-- <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option> -->
+        </select>
+        <br> 
+        <label for="tagInput">標籤：</label>
+        <br> 
+
+        <div id="tagList">
+          <span id="tagWrap">
+            <input type="text" id="tagInput" placeholder="#tag" maxlength="20">
+            <div class="list-group tagSuggestions hide">
+              <div
+              class="list-group-item list-group-item-action active" aria-current="true">
+                熱門標籤
+              </div>
+            </div>
+          </span>
+        </div>
+        <label for="songReview" class="form-label"><h2>酷東西心得</h2></label>
+        <textarea
+          class="form-control"
+          id="songReview"
+          rows="5"
+          placeholder="快告訴我這是什麼酷東西！"
+        ></textarea>
+        <!-- <label for="tagInput">標籤：</label>
+        <br> 
+
+        <div id="tagList">
+          <span id="tagWrap">
+            <input type="text" id="tagInput" placeholder="#tag" maxlength="20">
+            <div class="list-group tagSuggestions hide">
+              <div
+              class="list-group-item list-group-item-action active" aria-current="true">
+                熱門標籤
+              </div>
+            </div>
+          </span>
+        </div> -->
+
+        
+        <!-- <div class="list-group tagSuggestions hide">
+          <div
+          class="list-group-item list-group-item-action active" aria-current="true">
+            熱門標籤
+          </div>
+        </div> -->
+        
+      </div>
+    </div>
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/extension.js' %}"></script>
+  </body>
+</html>

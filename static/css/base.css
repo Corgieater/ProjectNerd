@@ -1,0 +1,8 @@
+.nav-item > form > button:focus {
+  outline: 0;
+}
+
+.nav-item > form > button {
+  border: none;
+  background-color: #f8f9fa;
+}

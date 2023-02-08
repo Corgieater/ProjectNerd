@@ -1,0 +1,48 @@
+.container-fluid {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+/* .ratio {
+  --bs-aspect-ratio: 50%;
+} */
+
+iframe {
+  border-radius: 20px;
+}
+
+.editableButton {
+  border: 1px solid gray;
+}
+
+#tagList {
+  display: flex;
+  position: relative;
+}
+
+#tagInput {
+  border: none;
+}
+#tagInput:focus {
+  outline: none;
+}
+#tagList > span {
+  padding: 10px;
+  list-style: none;
+}
+
+.tagSuggestions {
+  max-width: 300px;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+}
+
+.hide {
+  display: none;
+}
